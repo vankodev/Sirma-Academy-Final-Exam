@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
+import styles from './Header.module.css';
 
 function Header() {
     return (
-        <div className='header'>
-            <h1>
-                <Link className='home' to='/'>
+        <div className={styles.header}>
+            <div className={styles.logo}>
+                <Link className={styles.home} to='/'>
                     Football Tournament
                 </Link>
-            </h1>
-            <nav className='navigation'>
+            </div>
+            <nav className={styles.navigation}>
                 <Link to='/match'>Match</Link>
                 <Link to='/team'>Team</Link>
             </nav>

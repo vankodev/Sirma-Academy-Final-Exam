@@ -1,0 +1,24 @@
+.header {
+    padding: 20px;
+    background-color: var(--clr-800);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home {
+    color: var(--clr-100);
+    text-decoration: none;
+    font-size: var(--fs-3);
+    font-weight: var(--fw-bold);
+}
+
+.navigation > * {
+    color: var(--clr-100);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: var(--fs-5);
+    letter-spacing: 3px;
+}
