@@ -1,12 +1,13 @@
-import MatchCard from '../components/MatchCard';
+import { useContext } from 'react';
+import DataContext from '../contexts/dataContext';
 
 function Brackets() {
+    const { matches } = useContext(DataContext);
+
     return (
         <div className='brackets'>
-            <MatchCard />
-            <MatchCard />
-            <MatchCard />
-            <MatchCard />
+            <h1>Parsed CSV Data</h1>
+            <pre>{JSON.stringify(matches, null, 2)}</pre>
         </div>
     );
 }
