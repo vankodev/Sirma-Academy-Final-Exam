@@ -7,6 +7,8 @@ import Match from './pages/Match';
 import Team from './pages/Team';
 import Header from './components/Header';
 
+import { parseCSV } from './utils/csvParser'; 
+
 function App() {
     const [data, setData] = useState([]);
 
@@ -18,25 +20,6 @@ function App() {
                 setData(parsedData);
             });
     }, []);
-
-    const parseCSV = (csvText) => {
-        const lines = csvText.trim().split(/\r?\n/);
-        const headers = lines[0].split(',');
-    
-        const data = lines.slice(1).map((line) => {
-            const values = line.split(',');
-            const obj = {};
-    
-            headers.forEach((header, index) => {
-                obj[header] = values[index].trim();
-            });
-            
-            return obj;
-        });
-    
-        return data;
-    };
-    
 
     return (
         <div className='app'>
