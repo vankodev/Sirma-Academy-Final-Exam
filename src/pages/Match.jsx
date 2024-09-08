@@ -2,7 +2,7 @@ import MatchCard from "../components/MatchCard";
 
 function Match() {
     return (
-        <div className="match">
+        <div className="match container">
             <MatchCard />
         </div>
     )

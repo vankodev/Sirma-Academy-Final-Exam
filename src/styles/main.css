@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* Colors */
+    --clr-100: #ffffff;
+    --clr-200: #f1f3f8;
+    --clr-400: #143cdb;
+    --clr-500: #2f59ac;
+    --clr-800: #000d40;
+    --clr-900: #030303;
+
+    /* Font Family */
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Roboto Condensed', sans-serif;
+
+    /* Font Size */
+    --fs-1: 3rem; /* 48px */
+    --fs-2: 2rem; /* 32px */
+    --fs-3: 1.5rem; /* 24px */
+    --fs-4: 1.25rem; /* 20px */
+    --fs-5: 1rem; /* 16px */
+    --fs-6: 0.75rem; /* 12px */
+
+    /* Font Weight */
+    --fw-bold: 700;
+    --fw-regular: 400;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-regular);
+    color: var(--clr-800);
+    background-color: var(--clr-100);
+    margin: 0;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-1);
+    line-height: 1;
+}
+
+h2 {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-2);
+    line-height: 1.1;
+}
+
+h3 {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-3);
+    line-height: 1.2;
+}
