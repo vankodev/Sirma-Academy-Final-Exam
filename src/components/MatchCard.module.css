@@ -1,0 +1,35 @@
+.matchCard {
+    padding: 20px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.team {
+    width: 150px;
+}
+
+.score {
+    align-self: center;
+    width: 50px;
+    text-align: center;
+}
+
+.countryFlag {
+    margin: 0 auto;
+    width: 60px;
+}
+
+.countryName {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+img {
+    width: 100%;
+}
