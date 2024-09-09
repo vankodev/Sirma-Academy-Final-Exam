@@ -1,0 +1,17 @@
+.brackets h1 {
+    margin-bottom: 40px;
+}
+
+.bracketsContent {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.bracket {
+    border: 1px solid black;
+}
+
+.bracket > * + * {
+    margin-top: 20px;
+}
