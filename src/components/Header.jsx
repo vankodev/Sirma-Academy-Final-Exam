@@ -9,10 +9,10 @@ function Header() {
                     Football Tournament
                 </Link>
             </div>
-            <nav className={styles.navigation}>
+            {/* <nav className={styles.navigation}>
                 <Link to='/match'>Match</Link>
                 <Link to='/team'>Team</Link>
-            </nav>
+            </nav> */}
         </div>
     );
 }

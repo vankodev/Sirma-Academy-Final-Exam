@@ -13,8 +13,8 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/match' element={<Match />} />
-                    <Route path='/team' element={<Team />} />
+                    <Route path='/match/:matchID' element={<Match />} />
+                    <Route path='/team/:teamID' element={<Team />} />
                 </Routes>
             </div>
         </DataProvider>

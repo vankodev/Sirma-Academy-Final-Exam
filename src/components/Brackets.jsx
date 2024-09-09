@@ -56,11 +56,9 @@ function Brackets() {
     const finalBracket = [bracketsMatches.pop()];
     const thirdBracket = getPrevMatches(finalBracket);
     const secondBracket = getPrevMatches(thirdBracket);
-    const firstBracket = getPrevMatches(secondBracket);
+    const firstBracket = getPrevMatches(secondBracket); 
 
     const brackets = [firstBracket, secondBracket, thirdBracket, finalBracket];
-
-    console.log(brackets);
 
     return (
         <div className={styles.brackets}>
