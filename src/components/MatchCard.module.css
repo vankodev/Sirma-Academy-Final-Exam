@@ -1,8 +1,14 @@
 .matchCard {
+    width: 400px;
+    height: 155px;
     padding: 20px;
-    width: 300px;
     border: 1px solid black;
     border-radius: 10px;
+    display: grid;
+    place-content: center;
+}
+
+.inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,23 +19,21 @@
 }
 
 .score {
+    width: 70px;
+    flex-shrink: 0;
     align-self: center;
-    width: 50px;
+    text-wrap: nowrap;
     text-align: center;
 }
 
 .countryFlag {
-    margin: 0 auto;
     width: 60px;
+    margin: 0 auto;
 }
 
 .countryName {
+    margin-top: 10px;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
-img {
-    width: 100%;
+    line-height: 1.1;
 }

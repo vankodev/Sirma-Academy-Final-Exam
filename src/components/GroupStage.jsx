@@ -1,5 +1,5 @@
 function GroupStage() {
-    return <h1>GroupStage Component</h1>;
+    return <h1>Group Stage</h1>;
 }
 
 export default GroupStage;

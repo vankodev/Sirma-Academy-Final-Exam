@@ -34,8 +34,15 @@
 }
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
 p {
     margin: 0;
 }
@@ -67,12 +74,12 @@ img {
 }
 
 body {
+    margin: 0;
     font-family: var(--ff-primary);
-    font-size: var(--fs-4);
+    font-size: var(--fs-6);
     font-weight: var(--fw-regular);
     color: var(--clr-800);
     background-color: var(--clr-100);
-    margin: 0;
     line-height: 1.5;
 }
 
@@ -95,4 +102,18 @@ h3 {
     font-weight: var(--fw-regular);
     font-size: var(--fs-3);
     line-height: 1.2;
+}
+
+h4 {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-4);
+    line-height: 1.3;
+}
+
+h5 {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-5);
+    line-height: 1.4;
 }
