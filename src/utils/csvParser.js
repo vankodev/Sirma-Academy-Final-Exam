@@ -7,7 +7,13 @@ export const parseCSV = (csvText) => {
         const obj = {};
 
         headers.forEach((header, index) => {
-            obj[header] = values[index].trim();
+            let value = values[index].trim();
+
+            if (header.toLowerCase() === 'date') {
+                value = new Date(value);
+            }
+
+            obj[header] = value;
         });
 
         return obj;

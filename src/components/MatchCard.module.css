@@ -23,7 +23,9 @@
     flex-shrink: 0;
     align-self: center;
     text-wrap: nowrap;
-    text-align: center;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
 }
 
 .countryFlag {
