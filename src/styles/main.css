@@ -79,7 +79,7 @@ body {
     font-size: var(--fs-6);
     font-weight: var(--fw-regular);
     color: var(--clr-800);
-    background-color: var(--clr-100);
+    background-color: var(--clr-200);
     line-height: 1.5;
 }
 
