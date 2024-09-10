@@ -13,25 +13,42 @@ function Team() {
 
     const team = teams.find((team) => team.ID === teamID);
     const teamPlayers = players.filter((player) => player.TeamID === teamID);
+    const teamFlagPath = `/images/country-flags/${team.Name.toLowerCase()}.svg`
 
     return (
-        <div className='team'>
-            <h1>{team.Name}</h1>;<h2>Group: {team.Group}</h2>
-            <h4>Manager: {team.ManagerFullName}</h4>
-            <table className={styles.playersTable}>
-                <tr>
-                    <th>Number</th>
-                    <th>Player</th>
-                    <th>Position</th>
-                </tr>
-                {teamPlayers.map((player) => (
-                    <tr key={player.ID}>
-                        <td>{player.TeamNumber}</td>
-                        <td>{player.FullName}</td>
-                        <td>{player.Position}</td>
-                    </tr>
-                ))}
-            </table>
+        <div className="container">
+            <div className={styles.team}>
+                <div className={styles.teamInner}>
+                    <div className={styles.teamHeader}>
+                        <div className={styles.teamHeaderContent}>
+                            <h5 className={styles.teamGroup}>Group {team.Group}</h5>
+                            <h1 className={styles.teamName}>{team.Name}</h1>
+                            <h5 className={styles.managerName}>Manager: {team.ManagerFullName}</h5>
+                        </div>
+                        <div className={styles.countryFlag}>
+                            <img src={teamFlagPath} alt="country-flag" />
+                        </div>
+                    </div>
+                    <div className={styles.playersTableWrapper}>
+                        <table className={styles.playersTable}>
+                            <tr className={styles.tableHeader}>
+                                <th>No</th>
+                                <th>Player</th>
+                                <th>Position</th>
+                            </tr>
+                            {teamPlayers.map((player) => (
+                                <tr className={styles.tableRows} key={player.ID}>
+                                    <td className={styles.playerNumber}>{player.TeamNumber}</td>
+                                    <td className={styles.playerName}>{player.FullName}</td>
+                                    <td className={styles.playerPosition}>
+                                        <span className={styles.playerPositionBackground}>{player.Position}</span>
+                                    </td>
+                                </tr>
+                            ))}
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
