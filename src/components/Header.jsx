@@ -4,15 +4,9 @@ import styles from './Header.module.css';
 function Header() {
     return (
         <div className={styles.header}>
-            <div className={styles.logo}>
-                <Link className={styles.home} to='/'>
-                    Football Tournament
-                </Link>
-            </div>
-            {/* <nav className={styles.navigation}>
-                <Link to='/match'>Match</Link>
-                <Link to='/team'>Team</Link>
-            </nav> */}
+            <Link className={styles.logo} to='/'>
+                <img src='/images/logo.svg' alt='logo' />
+            </Link>
         </div>
     );
 }
