@@ -29,11 +29,16 @@ nav {
     gap: 20px;
 }
 
-nav h5 {
+nav > * {
     color: var(--clr-500);
+    font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+nav > *:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
