@@ -1,14 +1,44 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import DataContext from '../contexts/dataContext';
 import styles from './Positions.module.css';
 
 function Positions({ team }) {
     const navigate = useNavigate();
+    const { players, records } = useContext(DataContext);
 
-    console.log(team)
+    const positions = { FW: [], MF: [], DF: [], GK: [] };
+    const positionOrder = ['FW', 'MF', 'DF', 'GK'];
+
+    const teamPlayers = players.filter((player) => player.TeamID === team.ID);
+    const starters = teamPlayers.filter((player) =>
+        records.find((record) => player.ID === record.PlayerID && record.fromMinutes === '0')
+    );
+
+    starters.forEach((player) => {
+        positions[player.Position].push(player);
+    });
 
     return (
-        <div className={styles.positions} onClick={() => navigate(`/team/${team.ID}`)}>
-            <img src="/images/positions.svg" alt="positions" />        
+        <div className={styles.positions}>
+            <h2 className={styles.teamName}>{team.Name}</h2>
+            <h5 className={styles.managerName}>Manager: {team.ManagerFullName}</h5>
+
+            <div className={styles.positionsContent} onClick={() => navigate(`/team/${team.ID}`)}>
+                <img src='/images/positions.svg' alt='positions' />
+                <div className={styles.rows}>
+                    {positionOrder.map((positionKey) => (
+                        <div key={positionKey} className={styles.row}>
+                            {positions[positionKey].map((player) => (
+                                <div key={player.ID} className={styles.playerDot}>
+                                    <p className={styles.playerNumber}>{player.TeamNumber}</p>
+                                    <p className={styles.playerInfo}>{player.FullName}</p>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }

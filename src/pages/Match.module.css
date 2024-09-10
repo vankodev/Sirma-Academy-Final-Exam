@@ -11,5 +11,12 @@
 
 .positions {
     display: flex;
+    flex-direction: row;
     gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .positions {
+        flex-direction: column;
+    }
 }
