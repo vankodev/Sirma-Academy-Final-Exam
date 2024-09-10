@@ -62,8 +62,6 @@ function Brackets() {
 
     return (
         <div className={styles.brackets}>
-            <h1>Brackets</h1>
-
             <div className={styles.bracketsContent}>
                 {brackets.map((bracket, i) => (
                     <div className={styles.bracket} key={i}>

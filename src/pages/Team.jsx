@@ -31,20 +31,24 @@ function Team() {
                     </div>
                     <div className={styles.playersTableWrapper}>
                         <table className={styles.playersTable}>
-                            <tr className={styles.tableHeader}>
-                                <th>No</th>
-                                <th>Player</th>
-                                <th>Position</th>
-                            </tr>
-                            {teamPlayers.map((player) => (
-                                <tr className={styles.tableRows} key={player.ID}>
-                                    <td className={styles.playerNumber}>{player.TeamNumber}</td>
-                                    <td className={styles.playerName}>{player.FullName}</td>
-                                    <td className={styles.playerPosition}>
-                                        <span className={styles.playerPositionBackground}>{player.Position}</span>
-                                    </td>
+                            <thead>
+                                <tr className={styles.tableHeader}>
+                                    <th>No</th>
+                                    <th>Player</th>
+                                    <th>Position</th>
                                 </tr>
-                            ))}
+                            </thead>
+                            <tbody>
+                                {teamPlayers.map((player) => (
+                                    <tr className={styles.tableRows} key={player.ID}>
+                                        <td className={styles.playerNumber}>{player.TeamNumber}</td>
+                                        <td className={styles.playerName}>{player.FullName}</td>
+                                        <td className={styles.playerPosition}>
+                                            <span className={styles.playerPositionBackground}>{player.Position}</span>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
                         </table>
                     </div>
                 </div>

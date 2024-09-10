@@ -1,16 +1,26 @@
 .matchCard {
+    position: relative;
     cursor: pointer;
     width: 300px;
-    height: 110px;
+    height: 120px;
     padding: 10px;
     background-color: var(--clr-100);
-    border: 1px solid #cfd4e1;
+    border: 1px solid var(--clr-250);
     border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
 }
 
+.matchDate {
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    color: var(--clr-300);
+}
+
 .inner {
+    padding-top: 10px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -34,11 +44,12 @@
 .countryFlag {
     width: 40px;
     margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .countryName {
     margin-top: 10px;
-    text-transform: uppercase;
     text-align: center;
     line-height: 1.1;
 }

@@ -21,8 +21,7 @@ function Positions({ team }) {
 
     return (
         <div className={styles.positions}>
-            <h2 className={styles.teamName}>{team.Name}</h2>
-            <h5 className={styles.managerName}>Manager: {team.ManagerFullName}</h5>
+            <h3 className={styles.teamName}>{team.Name}</h3>
 
             <div className={styles.positionsContent} onClick={() => navigate(`/team/${team.ID}`)}>
                 <img src='/images/positions.svg' alt='positions' />

@@ -14,8 +14,11 @@ function MatchCard({ match }) {
     const teamB = teams.find(team => team.ID === match.BTeamID);
     const teamBFlagPath = `/images/country-flags/${teamB.Name.toLowerCase()}.svg`
 
+    const matchDate = match.Date.toLocaleDateString();
+
     return (
         <div className={styles.matchCard} onClick={() => navigate(`/match/${match.ID}`)}>
+            <p className={styles.matchDate}>{matchDate}</p>
             <div className={styles.inner}>
                 <div className={styles.team}>
                     <div className={styles.countryFlag}>

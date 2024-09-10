@@ -1,12 +1,10 @@
 .teamName {
+    margin-bottom: 10px;
+    color: var(--clr-300);
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
-}
-
-.managerName {
-    text-align: center;
-    margin-bottom: 10px;
+    font-weight: var(--fw-bold);
 }
 
 .positionsContent {
