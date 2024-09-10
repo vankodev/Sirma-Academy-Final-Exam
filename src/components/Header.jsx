@@ -7,6 +7,10 @@ function Header() {
             <Link className={styles.logo} to='/'>
                 <img src='/images/logo.svg' alt='logo' />
             </Link>
+            <nav>
+                <Link to='/'><h5>Matches</h5></Link>
+                <Link to='/teams'><h5>Teams</h5></Link>
+            </nav>
         </div>
     );
 }

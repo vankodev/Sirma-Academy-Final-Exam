@@ -1,5 +1,5 @@
-import Brackets from '../components/Brackets';
-// import GroupStage from '../components/GroupStage';
+import Brackets from './Brackets';
+// import GroupStage from './GroupStage';
 import styles from './Home.module.css';
 
 function Home() {

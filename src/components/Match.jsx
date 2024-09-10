@@ -3,8 +3,8 @@ import { useContext } from 'react';
 import DataContext from '../contexts/dataContext';
 import styles from './Match.module.css';
 
-import MatchCard from '../components/MatchCard';
-import Positions from '../components/Positions';
+import MatchCard from './MatchCard';
+import Positions from './Positions';
 
 function Match() {
     const { matchID } = useParams();
