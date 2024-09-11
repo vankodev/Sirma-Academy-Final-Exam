@@ -11,6 +11,10 @@
     cursor: pointer;
     position: relative;
     max-width: 500px;
+    border: 1px solid var(--clr-250);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .rows {

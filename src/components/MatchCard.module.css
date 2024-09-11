@@ -10,6 +10,11 @@
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
+    /* transition: transform 0.1s ease-in; */
+}
+
+.matchCard:hover {
+    /* transform: scale(1.05); */
 }
 
 .matchDate {

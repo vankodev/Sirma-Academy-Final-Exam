@@ -38,6 +38,7 @@ nav > * {
 }
 
 nav > *:hover {
+    color: var(--clr-400);
     text-decoration: underline;
 }
 

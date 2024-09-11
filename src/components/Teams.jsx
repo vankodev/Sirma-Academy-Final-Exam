@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import DataContext from '../contexts/dataContext';
 import styles from './Teams.module.css';
 
@@ -12,26 +12,40 @@ function Teams() {
     }
 
     return (
-        <div className="container">
+        <div className='container'>
             <div className={styles.teams}>
-                <table className={styles.playersTable}>
-                    <thead>
-                        <tr className={styles.tableHeader}>
-                            <th>Group</th>
-                            <th>Team</th>
-                            <th>Manager</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {teams.map((team) => (
-                            <tr className={styles.team} key={team.ID} onClick={() => navigate(`/team/${team.ID}`)}>
-                                <td className={styles.group}>{team.Group}</td>
-                                <td className={styles.name}>{team.Name}</td>
-                                <td className={styles.manager}>{team.ManagerFullName}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <div className={styles.teamsInner}>
+                    <div className={styles.teamsTableWrapper}>
+                        <table className={styles.teamsTable}>
+                            <thead>
+                                <tr className={styles.tableHeader}>
+                                    <th>Team</th>
+                                    <th>Manager</th>
+                                    <th>Group</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {teams.map((team) => (
+                                    <tr
+                                        className={styles.tableRows}
+                                        key={team.ID}
+                                        onClick={() => navigate(`/team/${team.ID}`)}
+                                    >
+                                        <td className={styles.name}>
+                                            <img
+                                                src={`/images/country-flags/${team.Name.toLowerCase()}.svg`}
+                                                alt='country-flag'
+                                            />
+                                            <span>{team.Name}</span>
+                                        </td>
+                                        <td className={styles.manager}>{team.ManagerFullName}</td>
+                                        <td className={styles.group}>{team.Group}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     );
