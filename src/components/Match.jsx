@@ -11,7 +11,7 @@ function Match() {
     const { matches, teams } = useContext(DataContext);
 
     if (!matches || !teams) {
-        return <h3>Loading...</h3>;
+        return <h3 className='loading'>Loading...</h3>;
     }
 
     const match = matches.find((match) => match.ID === matchID);

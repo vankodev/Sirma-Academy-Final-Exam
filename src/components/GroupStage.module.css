@@ -1,0 +1,19 @@
+.groupStage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.date {
+    color: var(--clr-500);
+}
+
+.date > * + * {
+    margin-top: 20px;
+}
+
+.matches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}

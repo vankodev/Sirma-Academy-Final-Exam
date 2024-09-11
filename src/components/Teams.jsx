@@ -8,7 +8,7 @@ function Teams() {
     const { teams } = useContext(DataContext);
 
     if (!teams) {
-        return <h3>Loading...</h3>;
+        return <h3 className='loading'>Loading...</h3>;
     }
 
     return (

@@ -8,7 +8,7 @@ function Team() {
     const { teams, players } = useContext(DataContext);
 
     if (!teams || !players) {
-        return <h3>Loading...</h3>;
+        return <h3 className='loading'>Loading...</h3>;
     }
 
     const team = teams.find((team) => team.ID === teamID);
