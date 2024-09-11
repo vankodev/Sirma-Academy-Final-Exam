@@ -5,6 +5,11 @@
     align-items: center;
 }
 
+.teamInner {
+    width: 100%;
+    max-width: 500px;
+}
+
 .teamHeader {
     padding: 20px;
     display: flex;
@@ -15,6 +20,12 @@
 .countryFlag {
     width: 80px;
     padding-top: 10px;
+}
+
+.countryFlag img {
+    border: 1px solid var(--clr-250);
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .team .teamName {
@@ -31,7 +42,6 @@
 }
 
 .playersTableWrapper {
-    width: 500px;
     padding: 10px 20px;
     background-color: white;
     border: 1px solid var(--clr-250);
@@ -40,7 +50,7 @@
 }
 
 .playersTable {
-    width: 460px;
+    width: 100%;
     border-collapse: collapse;
 }
 
