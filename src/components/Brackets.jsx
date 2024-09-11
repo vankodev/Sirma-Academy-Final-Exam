@@ -49,6 +49,12 @@ function Brackets({ matches }) {
 
     return (
         <div className={styles.brackets}>
+            <div className={styles.bracketsHeader}>
+                <h4>Round of 16</h4>
+                <h4>Quarter-Finals</h4>
+                <h4>Semi-Finals</h4>
+                <h4>Final</h4>
+            </div>
             <div className={styles.bracketsContent}>
                 {brackets.map((bracket, i) => (
                     <div className={styles.bracket} key={i}>
