@@ -8,20 +8,11 @@
 
 A React.js web application built for the Sirma Academy final exam. It visualizes data from the European Football Championship, including match results, team details, and player formations. The application dynamically parses data from CSV files, stores it using React's Context API, and renders it in an interactive, responsive interface. Users can explore match brackets, group stages, and detailed views of individual teams and matches.
 
-## How to Start the Project
+## Screenshots
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/vankodev/Sirma-Academy-Final-Exam.git
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the app:
-   ```bash
-   npm run dev
-   ```
+![](https://github.com/user-attachments/assets/825ff944-7329-4359-b8d5-ee508789b054)
+
+![](https://github.com/user-attachments/assets/08e333ac-652b-4e94-a760-6497c23e126f)
 
 ## Functionality
 
@@ -60,3 +51,18 @@ Matches are sorted into an object using their `Date` property as keys. This crea
 ### 3. Team Formation
 
 The code filters team players to get starters (players with `fromMinutes === '0'`). These starters are then grouped by position in an object. The render method maps over a list of positions, creating rows for each position and filling them with the corresponding players.
+
+## How to Start the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vankodev/Sirma-Academy-Final-Exam.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the app:
+   ```bash
+   npm run dev
+   ```
